@@ -2,10 +2,12 @@ import Image from "next/image";
 import React from "react";
 import portfolioImage from '../asset/portfolio.jpg'
 import { motion } from 'framer-motion'
+import aboutjpg from '../asset/about.jpg'
 
 type Props = {};
 
 export default function About({}: Props) {
+  const aboutImg = <Image src={aboutjpg} alt="" />
   return (
     <motion.div 
     initial={{ opacity:0 }}
@@ -16,25 +18,29 @@ export default function About({}: Props) {
         About
       </h3>
       
-        <motion.img 
-        initial={{
-            x:-200,
-            opacity:0
-        }}
-        whileInView={{
-            x:0,
-            opacity:1
-        }}
-        viewport={{
-            once:true
-        }}
-        transition={{
-            duration:1.2
-        }}
-        src="https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/300630783_10227108152834683_3462862914510379183_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=HQBt3diTDRwAX_gc24o&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAMfCwaan4ZhvVIs56aZCbFQ1IwRFa9aN7RiiaqOIPR8Q&oe=63F82F93"
+        <motion.div 
+                initial={{
+                  x:-200,
+                  opacity:0
+              }}
+              whileInView={{
+                  x:0,
+                  opacity:1
+              }}
+              viewport={{
+                  once:true
+              }}
+              transition={{
+                  duration:1.2
+              }}
+        >
+        <Image 
+        src= {aboutjpg}
         alt="Ricky Picture with Bella"
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
+        className="-mb-20 md: md:mb-0 flex-shrink-0 w-56 rounded-full object cover md:rounded-lg md:w-64 xl:w-[800px]"
         />
+        </motion.div> 
+
 
         <div 
         className="space-y-10 px-0 md:px-10">
